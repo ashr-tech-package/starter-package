@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
  * @method static responseCreateFailed(string $module)
  * @method static responseNotFound(string $module)
  * @method static responseUpdated(string $module, $data = null)
- * @method static responseUpdatedFailed(string $module)
+ * @method static responseUpdateFailed(string $module)
  * @method static responseDeleted(string $module, mixed $data)
  * @method static responseDeleteFailed(string $module)
  * @method static responseUnauthorized($data = null, $header = null, $body = null, int $status = Response::HTTP_UNAUTHORIZED)

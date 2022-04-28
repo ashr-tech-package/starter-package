@@ -79,7 +79,7 @@ trait HandleResponse
      * @param string $module
      * @return JsonResponse
      */
-    protected function responseUpdatedFailed(string $module): JsonResponse
+    protected function responseUpdateFailed(string $module): JsonResponse
     {
         return $this->jsonResponse(
             [],
