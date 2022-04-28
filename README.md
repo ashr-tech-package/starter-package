@@ -16,5 +16,4 @@ composer require ashr/starter
 
 ## How to use
 
-* Use middleware: ```Route::get('/access', [AccessController::class, 'createPost'])
-  ->middleware('can-access:create-post');``` create-post is permission need authorize to auth service
+* Use middleware: ```Route::post('/', [PostController::class, 'createPost'])->middleware('can-access:create-post');``` create-post is permission need authorize to auth service
