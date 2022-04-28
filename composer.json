@@ -1,0 +1,29 @@
+{
+    "name": "ashr/starter",
+    "description": "Starter - Decouple function that is frequently used.",
+    "type": "library",
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^9.9"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ashr\\Starter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ashr",
+            "email": "ashr.tech@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ashr\\Starter\\ServiceProvider"
+            ]
+        }
+    }
+}
