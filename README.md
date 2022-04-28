@@ -23,6 +23,6 @@ composer require ashr/starter
   * responseCreateFailed
   * responseNotFound
   * responseUpdated
-  * responseUpdatedFailed
+  * responseUpdateFailed
   * responseDeleted
   * responseDeleteFailed
