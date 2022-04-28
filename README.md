@@ -17,3 +17,12 @@ composer require ashr/starter
 ## How to use
 
 * Use middleware: ```Route::post('/', [PostController::class, 'createPost'])->middleware('can-access:create-post');``` create-post is permission need authorize to auth service
+* Customize error form request by extending class ```Ashr\Starter\Services\Response\CustomFormRequest```
+* For formatting basic crud response use methods:
+  * responseCreated
+  * responseCreateFailed
+  * responseNotFound
+  * responseUpdated
+  * responseUpdatedFailed
+  * responseDeleted
+  * responseDeleteFailed
