@@ -4,7 +4,7 @@ namespace Ashr\Starter\Middleware;
 
 use Ashr\Starter\Support\Facades\MicroserviceServiceLayer;
 use Closure;
-use Symfony\Component\HttpFoundation\Response as HttpResponse;
+use Symfony\Component\HttpFoundation\Response;
 
 class MicroserviceAccessMiddleware
 {
@@ -12,7 +12,7 @@ class MicroserviceAccessMiddleware
     {
        $response = MicroserviceServiceLayer::userCanAccess($permission);
 
-       if ($response->status() !== HttpResponse::HTTP_OK) {
+       if ($response->status() !== Response::HTTP_OK) {
            return response()->json($response->json(), $response->status());
        }
 
