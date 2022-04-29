@@ -209,7 +209,7 @@ trait HandleResponse
      */
     protected function jsonResponse($data, $header, $body, int $status): JsonResponse
     {
-        $errorCode = [400, 401, 403, 422, 500];
+        $errorCode = [400, 401, 403, 404, 422, 500];
 
         $response = [
             'data' => $data,
