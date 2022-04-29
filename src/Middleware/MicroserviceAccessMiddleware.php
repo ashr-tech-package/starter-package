@@ -16,6 +16,6 @@ class MicroserviceAccessMiddleware
            return response()->json($response->json(), $response->status());
        }
 
-        return $next($request);
+       return $next($request);
     }
 }

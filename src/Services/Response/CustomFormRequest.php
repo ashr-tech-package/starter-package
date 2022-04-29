@@ -2,6 +2,7 @@
 
 namespace Ashr\Starter\Services\Response;
 
+use Ashr\Starter\Support\Facades\MicroserviceServiceLayer;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\ValidationException;
@@ -18,13 +19,12 @@ class CustomFormRequest extends FormRequest
      */
     public function failedValidation(Validator $validator)
     {
-        $response = response()->json([
-            'message' => [
-                'header' => $this->messageHeader(),
-                'body' => $this->messageBody()
-            ],
-            'errors' => $validator->errors()
-        ], Response::HTTP_UNPROCESSABLE_ENTITY);
+        $response = MicroserviceServiceLayer::jsonResponse(
+            $validator->errors(),
+            $this->messageHeader(),
+            $this->messageBody(),
+            Response::HTTP_UNPROCESSABLE_ENTITY
+        );
 
         throw (new ValidationException($validator, $response))
             ->errorBag($this->errorBag)
